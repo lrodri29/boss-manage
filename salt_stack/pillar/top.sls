@@ -25,6 +25,6 @@ base:
   'jenkins*':
     - jenkins
 
-# Chrony NTP 
+  # Chrony NTP 
   'chrony*':
     - chrony
