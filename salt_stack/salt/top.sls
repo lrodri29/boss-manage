@@ -2,16 +2,19 @@ base:
     'consul*':
         - consul
         - boss-tools.bossutils
+        - chrony
 
     'vault*':
         - vault.server
         - boss-tools.bossutils
         - scalyr
         - scalyr.update_host
+        - chrony
 
     'auth*':
         - boss-tools.bossutils
         - keycloak
+        - chrony
 
     'endpoint*':
         - boss-tools.bossutils
@@ -23,6 +26,7 @@ base:
         - scalyr.update_host
         - git
         - ingest-client.ingest
+        - chrony
 
     'lambda*':
         - lambda-dev
@@ -57,6 +61,7 @@ base:
         - scalyr
         - scalyr.update_host
         - git
+        - chrony
 
     'activities*':
         - scalyr
@@ -70,3 +75,5 @@ base:
         # Resolution hierarchy
         - spdb
         - scipy
+
+        - chrony
