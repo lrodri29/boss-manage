@@ -24,7 +24,3 @@ base:
   # Jenkins server for Python scripts such as those in boss-tools.
   'jenkins*':
     - jenkins
-
-  # Chrony NTP 
-  'chrony*':
-    - chrony

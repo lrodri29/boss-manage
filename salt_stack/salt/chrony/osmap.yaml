@@ -3,7 +3,7 @@
 Debian:
   service: chrony
   config: /etc/chrony/chrony.conf
-  ntpservers: [ '0.debian.pool.ntp.org', 
+  ntpservers: [ '0.debia.pool.ntp.org', 
                 '1.debian.pool.ntp.org',
                 '2.debian.pool.ntp.org',
                 '3.debian.pool.ntp.org', ]
