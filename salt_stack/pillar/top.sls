@@ -4,30 +4,30 @@ base:
 
   'endpoint*':
     - endpoint
-    - ch
+    - chrony.config
 
   'cachemanager*':
     - cachemanager
-    - chrony
+    - chrony.config
 
   'activities*':
     - activities
-    - chrony
+    - chrony.config
 
   'ep-jenkins*':
     - endpoint-jenkins
-    - chrony
+    - chrony.config
 
   'proofreader-web*':
     - proofreader-web
-    - chrony
+    - chrony.config
 
   # Jenkins server for Django proofreader tests.
   'pr-jenkins*':
     - proofreader-jenkins
-    - chrony
+    - chrony.config
 
   # Jenkins server for Python scripts such as those in boss-tools.
   'jenkins*':
     - jenkins
-    - chrony
+    - chrony.config
