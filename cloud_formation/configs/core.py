@@ -84,15 +84,15 @@ def create_config(session, domain):
     # it seems that both Lambdas and ASGs needs lambda_compatible_only subnets.
     internal_subnets_lambda, external_subnets_lambda = config.add_all_azs(session, lambda_compatible_only=True)
 
-    config.add_ec2_instance("Bastion",
-                            names.bastion,
-                            aws.ami_lookup(session, const.BASTION_AMI),
-                            keypair,
-                            subnet = Ref("ExternalSubnet"),
-                            public_ip = True,
-                            user_data = const.BASTION_USER_DATA,
-                            security_groups = [Ref("InternalSecurityGroup"), Ref("BastionSecurityGroup")],
-                            depends_on = "AttachInternetGateway")
+    # config.add_ec2_instance("Bastion",
+    #                         names.bastion,
+    #                         aws.ami_lookup(session, const.BASTION_AMI),
+    #                         keypair,
+    #                         subnet = Ref("ExternalSubnet"),
+    #                         public_ip = True,
+    #                         user_data = const.BASTION_USER_DATA,
+    #                         security_groups = [Ref("InternalSecurityGroup"), Ref("BastionSecurityGroup")],
+    #                         depends_on = "AttachInternetGateway")
 
     user_data = UserData()
     user_data["system"]["fqdn"] = names.consul
